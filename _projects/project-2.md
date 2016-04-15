@@ -2,7 +2,7 @@
 layout: project
 title: Baxter drawing
 date: March 22, 2016
-image: https://s3.amazonaws.com/f.cl.ly/items/3Q182H3p2I3I0h1j2H0W/u=4252172212,1339161018&fm=21&gp=0.jpg
+image: https://s3.amazonaws.com/f.cl.ly/items/0t3h0z1M2i061G2A2K1v/Screenshot%20-%2004142016%20-%2010%3A53%3A56%20PM.png?v=3e977762
 ---
 
 ## Overview
@@ -17,11 +17,11 @@ The purpose of this project was to create a demonstration that combined robot ar
 ### Files In Package:
 * #### In Package (drawing_left):
 	
-  ####[takephoto_right.py](https://github.com/MingheJiang/baxter_drawing/blob/master/takephoto_right/takephoto_right.py)
+    [takephoto_right.py](https://github.com/MingheJiang/baxter_drawing/blob/master/takephoto_right/takephoto_right.py)
 	
 	>>This file firstly let the right camera find the content in the paper. Then after taking picture of the content and appling image processing on it, its pixels converted into x,y locations in Baxter workspace finally.
 	
-    ####[setup.dat](https://github.com/MingheJiang/baxter_drawing/blob/master/drawing_left/setup.dat)
+    [setup.dat](https://github.com/MingheJiang/baxter_drawing/blob/master/drawing_left/setup.dat)
 	>>Setup right arm and distance.
 	
 * #### In Package (drawing_left):
