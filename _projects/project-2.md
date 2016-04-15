@@ -1,8 +1,8 @@
 ---
 layout: project
 title: Baxter drawing
-date: March, 2016
-image: ![Alt text](/_projects/baxterdrawing.jpg)
+date: March 22, 2016
+image: ![Alt text](/home/minghe/catkin_ws/src/portfolio/_projects/baxterdrawing.jpg)
 ---
 
 ## Overview
