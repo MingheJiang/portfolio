@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Project 3
+title: Baxter drawing
 date: 2014-September
 image: http://unsplash.it/400?random
 ---
