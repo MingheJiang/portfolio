@@ -2,7 +2,8 @@
 layout: project
 title: Baxter drawing
 date: March 22, 2016
-image: ![Alt text](/home/minghe/catkin_ws/src/portfolio/_projects/baxterdrawing.jpg)
+image:
+https://s3.amazonaws.com/f.cl.ly/items/1I0P0Z2z0A1I3i1w0a06/baxterdrawing.jpg?v=53b4db0f
 ---
 
 ## Overview
@@ -16,22 +17,22 @@ The purpose of this project was to create a demonstration that combined robot ar
 ### Files In Package:
 * #### In Package (drawing_left):
 	
-	>####[takephoto_right.py](https://github.com/MingheJiang/baxter_drawing/blob/master/takephoto_right/takephoto_right.py)
+    ####[takephoto_right.py](https://github.com/MingheJiang/baxter_drawing/blob/master/takephoto_right/takephoto_right.py)
 	
 	>>This file firstly let the right camera find the content in the paper. Then after taking picture of the content and appling image processing on it, its pixels converted into x,y locations in Baxter workspace finally.
 	
-	>####[setup.dat](https://github.com/MingheJiang/baxter_drawing/blob/master/drawing_left/setup.dat)
+    ####[setup.dat](https://github.com/MingheJiang/baxter_drawing/blob/master/drawing_left/setup.dat)
 	>>Setup right arm and distance.
 	
 * #### In Package (drawing_left):
 
-	>####[joint_trajectory_action_server.py](https://github.com/MingheJiang/baxter_drawing/blob/master/drawing_left/joint_trajectory_action_server.py)
+    ####[joint_trajectory_action_server.py](https://github.com/MingheJiang/baxter_drawing/blob/master/drawing_left/joint_trajectory_action_server.py)
 	
-	>####[joint_trajectory_client.py](https://github.com/MingheJiang/baxter_drawing/blob/master/drawing_left/joint_trajectory_client.py)
+    ####[joint_trajectory_client.py](https://github.com/MingheJiang/baxter_drawing/blob/master/drawing_left/joint_trajectory_client.py)
 	
 	>>This file reads x,y,z data from the csv file which exported from takephoto_right.py and converts these locations into baxter 7 joint angles by using `baxter_ik_move()`. Then these sets of 7 joint angles are put into joint trajectory one by one. The trajectory is a function of time. Baxter will follow this trajectory to draw the content of picture. 
 	
-	>####[setup.dat](https://github.com/MingheJiang/baxter_drawing/blob/master/takephoto_right/setup.dat)
+    ####[setup.dat](https://github.com/MingheJiang/baxter_drawing/blob/master/takephoto_right/setup.dat)
 	>>Setup left arm and distance.
 
 ### Image Processing:
