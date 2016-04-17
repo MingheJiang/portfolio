@@ -46,7 +46,7 @@ After finding the content and taking the canny image of it, the image is dilated
 Then the new x,y locations are splined by the function  `interpolate.splev()` to get much smoother lines. 
 
 See a demo here:
-
+    [demo](https://vimeo.com/163183545)
 <p align="center">
 <iframe width="560" height="315" src="https://vimeo.com/163183545" frameborder="0" allowfullscreen></iframe>
 </p>
