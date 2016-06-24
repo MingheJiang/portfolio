@@ -2,7 +2,7 @@
 layout: about
 path: /about
 url: index.html
-image: https://s3.amazonaws.com/f.cl.ly/items/16141s1L1r2V3Z3b0K07/IMG_6664.JPG
+image:https://s3.amazonaws.com/f.cl.ly/items/2Y142q2g112Z0g300v0x/photo.png?v=1df4c168
 ---
 ## Education
 Bachelor of Information Display and Optoelectronic Technology, East China University of Science and Technology, Shanghai, China
