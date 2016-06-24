@@ -2,7 +2,7 @@
 layout: project
 title: Baxter drawing
 date: March 22, 2016
-image: https://s3.amazonaws.com/f.cl.ly/items/0t3h0z1M2i061G2A2K1v/Screenshot%20-%2004142016%20-%2010%3A53%3A56%20PM.png?v=3e977762
+image: baxterdrawing.png
 ---
 
 ## Overview

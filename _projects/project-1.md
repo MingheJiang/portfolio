@@ -2,7 +2,7 @@
 layout: project
 title: Research on Absorption Rate of High Energetic Ions to Lower Hybrid Wave in Tokamak
 date: Sep,2014 to Dec,2014
-image: https://s3.amazonaws.com/f.cl.ly/items/3Q182H3p2I3I0h1j2H0W/u=4252172212,1339161018&fm=21&gp=0.jpg
+image: researchabsorption.jpg
 ---
 
 ## Overview
