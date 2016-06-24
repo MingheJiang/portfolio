@@ -28,17 +28,79 @@
 
 
       <main class="project">
-	<section id="contact-content">
-		<img id="project-image" src="https://s3.amazonaws.com/f.cl.ly/items/1g3j010s3H2V2K1o1q2j/1.jpg">
-		<h1 id="project-title">Baxter drawing</h1>
-		<h2 id="project-date">Nov.2013—Dec.2014</h2>
+    <section id="contact-content">
+        <img id="project-image" src="/portfolio//public/images/https://s3.amazonaws.com/f.cl.ly/items/0t3h0z1M2i061G2A2K1v/Screenshot%20-%2004142016%20-%2010%3A53%3A56%20PM.png?v=3e977762">
+        <h1 id="project-title">Baxter drawing</h1>
+        <h2 id="project-date">2016-03-22 00:00:00 -0500</h2>
 
-		<h2 id="overview">Overview</h2>
-<p>Welding an LED board using the original elements and
-connecting to the oscilloscope, measuring its voltage, doing programming for the LED to implement its colorful and dynamic drive image</p>
+        <h2 id="overview">Overview</h2>
+
+<h3 id="introduction">Introduction:</h3>
+
+<p>The purpose of this project was to create a demonstration that combined robot arm kinematics and control with basic image processing. In the demo, a user draws a picture on a whiteboard and we use the right hand camera of a Baxter Research Robot to take an image of the user’s picture. Canny edge detection is used to build a set of SE(3) waypoints that represent the user’s picture. Finally, we solve the inverse kinematics for each waypoint, and design a joint space trajectory for Baxter’s left arm to follow. Baxter then draws a replica of the user’s original picture.</p>
+
+<h3 id="files-in-package">Files In Package:</h3>
+<ul>
+  <li>
+    <h4 id="in-package-drawingleft">In Package (drawing_left):</h4>
+
+    <p><a href="https://github.com/MingheJiang/baxter_drawing/blob/master/takephoto_right/takephoto_right.py">takephoto_right.py</a></p>
+
+    <blockquote>
+      <blockquote>
+        <p>This file firstly let the right camera find the content in the paper. Then after taking a picture of the content and appling image processing on it, its pixels converted into x,y locations in Baxter workspace finally.</p>
+      </blockquote>
+    </blockquote>
+
+    <p><a href="https://github.com/MingheJiang/baxter_drawing/blob/master/drawing_left/setup.dat">setup.dat</a></p>
+
+    <blockquote>
+      <blockquote>
+        <p>Setup right arm and distance.</p>
+      </blockquote>
+    </blockquote>
+  </li>
+  <li>
+    <h4 id="in-package-drawingleft-1">In Package (drawing_left):</h4>
+
+    <p><a href="https://github.com/MingheJiang/baxter_drawing/blob/master/drawing_left/joint_trajectory_action_server.py">joint_trajectory_action_server.py</a></p>
+
+    <p><a href="https://github.com/MingheJiang/baxter_drawing/blob/master/drawing_left/joint_trajectory_client.py">joint_trajectory_client.py</a></p>
+
+    <blockquote>
+      <blockquote>
+        <p>This file reads x,y,z data from the csv file which exported from takephoto_right.py and converts these locations into baxter 7 joint angles by using <code class="highlighter-rouge">baxter_ik_move()</code>. Then these sets of 7 joint angles are put into joint trajectory one by one. The trajectory is a function of time. Baxter will follow this trajectory to draw the content of picture.</p>
+      </blockquote>
+    </blockquote>
+
+    <p><a href="https://github.com/MingheJiang/baxter_drawing/blob/master/takephoto_right/setup.dat">setup.dat</a></p>
+
+    <blockquote>
+      <blockquote>
+        <p>Setup left arm and distance.</p>
+      </blockquote>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="image-processing">Image Processing:</h3>
+
+<p>The right camera firstly gets the canny image of its vision by <code class="highlighter-rouge">cv2.Canny()</code> and then finds the location of the content in paper by finding and moving to the x,y location of the center of its contour rectangle several times with <code class="highlighter-rouge">cv2.findContours()</code> and <code class="highlighter-rouge">cv2.rectangle()</code>.</p>
+
+<p>After finding the content and taking the canny image of it, the image is dilated and eroded in order to get the better result for houghing lines. By implementing <code class="highlighter-rouge">cv2.HoughLinesP()</code>, the sets of x,y pixels of these lines is obtained.</p>
+
+<p>Then the new x,y locations are splined by the function  <code class="highlighter-rouge">interpolate.splev()</code> to get much smoother lines.</p>
+
+<p>See a demo here:
+    <a href="https://vimeo.com/163183545">demo</a></p>
+<p align="center">
+<iframe width="560" height="315" src="https://vimeo.com/163183545" frameborder="0" allowfullscreen=""></iframe>
+</p>
+
+<iframe width="420" height="315" src="https://vimeo.com/163183545" frameborder="0" allowfullscreen=""></iframe>
 
 
-	</section>
+    </section>
 
 </main>
 
