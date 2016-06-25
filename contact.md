@@ -2,7 +2,7 @@
 layout: contact
 path: /contact
 url: index.html
-image: https://s3.amazonaws.com/f.cl.ly/items/16141s1L1r2V3Z3b0K07/IMG_6664.JPG
+image: contact.jpg
 ---
 
 ## Minghe Jiang

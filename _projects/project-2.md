@@ -11,7 +11,7 @@ This project was the final project of the course ME 495, Embedded Systems in Rob
 
 The whole task could be splited into two parts: **Image Processing** and **Inverse Kinematics**.
 
-All of the code for this project is hosted on this page.
+All of the code for this project is hosted on this page:
 [Github page](https://github.com/therrma2/Baxter-Pick-And-Place)
 
 

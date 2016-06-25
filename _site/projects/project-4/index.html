@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+
+	<title>Minghe Jiang Project Portfolio</title>
+	<link rel="icon" type="image/png" href="/portfolio/public/images/msr-student-template-favicon.png">
+
+	<link rel="stylesheet" href="/portfolio/public/stylesheets/style.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <header>
+    <nav>
+    	<a href="/portfolio/"><h1>Minghe's Portfolio</h1></a>
+    	<ul>
+    		<li><a href="/portfolio/">Portfolio</a></li>
+    		<li><a href="/portfolio/about/">About</a></li>
+    		<li><a href="/portfolio/contact/">Contact</a></li>
+    	</ul>
+    </nav>
+</header>
+
+
+      <main class="project">
+	<section id="contact-content">
+		<img id="project-image" src="/portfolio//public/images/blockdown.png">
+		<h1 id="project-title">Block rolling downwards the stair</h1>
+		<h2 id="project-date">December 1, 2015</h2>
+
+		<h2 id="overview">Overview</h2>
+
+<p>This project was the final project of the course ME 314, Machine Dynamics, at Northwestern University. This project was about simulating the process of a rectangular rolling downwards the stairs by using <a href="https://www.wolfram.com/mathematica/">Wolfram Mathematica</a>.</p>
+
+<p>The process can be splited into three parts:</p>
+
+<p>At first,There were two rectangles with the same mass (m = 1) and shape on the second floor.Initialized with a velocity of 2m/s, the first mass will move forward and hit
+the right mass.</p>
+
+<p>After the impact, both masses will change their motions. According to
+the ‘Law of Momentum Conservation’, the motion of two masses will satisfy
+the following equation during the impact: m1v1 = m2v2</p>
+
+<p>After the collision, the left rectangle will move backward and the right one
+will gain some speed and move forward. The right mass will then reach the
+end of the second floor and follow a parabolic trajectory as it is dropping.
+Mathematica function <code class="highlighter-rouge">WhenEvent</code> is used to obtain the time when the right mass hit the first stair as well as the point where the impact happens. 
+Numerical method is used to solve the velocity of the mass after the impact.</p>
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ly_A5m0RMMk" frameborder="0" allowfullscreen=""></iframe>
+</p>
+
+
+	</section>
+
+</main>
+
+
+      <footer>
+    <ul>
+    	<li>minghej@u.northwestern.edu</li>
+    	<li>1310 Hinman Ave, Evanston, IL, 60201</li>
+    	<li>(773) 273-0198</li>
+    </ul>
+</footer>
+
+
+
+    </div>
+
+  </body>
+</html>
