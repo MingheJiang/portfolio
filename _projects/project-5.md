@@ -13,8 +13,8 @@ This project was the final project of the course EECS 332, Intro. to Computer Vi
 
 * Find red region and get its average HSV value.
 * Filter the image and get red areas in HSV space.
-*  Filter the pen’s tip and Get the minimum rectangle which can hold the pen’s tip.
-*  Kalman filter is added to estimate the pen tip position.
+* Filter the pen’s tip and Get the minimum rectangle which can hold the pen’s tip.
+* Kalman filter is added to estimate the pen tip position.
 <p align="center">
 <img src="https://s3.amazonaws.com/f.cl.ly/items/0f3c1p3z082G2m031o0f/smart3.png?v=13b9f977" width="580" />
 

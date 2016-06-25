@@ -14,6 +14,9 @@ One sliders in the Android app was used to control the threshold of camera. Ther
 The default was set to be 100% PWM output for both left and right motors. PWM of motors was changed in order to change direction. When the COM2 was larger than 320, the 
 PWM of the right motor was decreased by (COM3-320)/320. When the COM2 was smaller than 320, the PWM of the left motor was decreased by (320-COM3)/320.
 
+
+<img src="https://s3.amazonaws.com/f.cl.ly/items/1w21171Q381a0J071N1m/smart4.png?v=f2369339" width="180" />
+
 All of the code for this project is hosted on this page:
 [Github page](https://github.com/MingheJiang/MingheJiang_ME433_2016/tree/master/HW16)
 
