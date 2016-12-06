@@ -35,9 +35,47 @@
 
 		<h2 id="overview">Overview</h2>
 
-<p>This project was the final project of the course ME 495, Embedded Systems in Robotics, at Northwestern University. The main goal of it was letting the Baxter robot autonomously pick objects off of a work surface and place them in a container. The blocks can be in different shapes, colors and placed at any position and orientation on the table.</p>
+<p>This project was the final project of the course ME 495, Embedded Systems in Robotics, at Northwestern University. The main goal of it was letting the Baxter robot autonomously pick objects off of a work surface and place them in a container. The blocks could be in different shapes, colors and placed at any position and orientation on the table.</p>
+
+<h3 id="capabilities">Capabilities:</h3>
+
+<ul>
+  <li>Multiple Object Shapes</li>
+  <li>Multiple Object Sizes</li>
+  <li>Multiple Object Colors</li>
+  <li>Multiple Object Orientations</li>
+  <li>Dynamic Image Processing - can adjust object positions/orientations between picks</li>
+</ul>
 
 <p>The whole task could be splited into two parts: <strong>Image Processing</strong> and <strong>Inverse Kinematics</strong>.</p>
+
+<h3 id="image-processing">Image Processing:</h3>
+
+<p>The balls and squares were found by using colour filtering image processing from the
+OpenCV library. Defaults were set to look for green and red filters in the
+Hue Saturation Value colour spectrum. The two filtered images were added together
+using an even weighting.</p>
+
+<p>A minimum enclosing rectangle was drawn around the biggest found contour. The two 
+corners with the minimum y-value were used to find a slope and thus the
+orientation of the object that needed to be picked up.</p>
+
+<h4 id="cameras">Cameras:</h4>
+<p>The camera attached to the right hand of Baxter was used to do the image
+processing. First it was orientated at a known fixed position to scout for objects.
+Once the biggest object was found, it re-orientated itself above the object. Then the number of iterations was adjusted that Baxter used to recheck its position above
+the object. Once the object was found, Baxter’s camera calculated the slope and reorientates itself to pick the object.</p>
+
+<h3 id="inverse-kinematics">Inverse Kinematics:</h3>
+
+<p>The  <code class="highlighter-rouge">ik_solve() </code> called an <code class="highlighter-rouge">Inverse-Kinematics(IK)</code> service provided by the ROS node  <code class="highlighter-rouge">/ExternalTools/&lt;limb&gt;/PositionKinematicsNode/ </code></p>
+
+<p>It took three elements: limb, desired Quartesian coordinate and orientation of the end effector of the Baxter and returned seven joint angles that would get the arm to that position.</p>
+
+<p>Refering to Inverse Kinematics Solver Service on the Baxter API reference page:
+<a href="http://sdk.rethinkrobotics.com/wiki/API_Reference#arm-joints">http://sdk.rethinkrobotics.com/wiki/API_Reference#arm-joints</a></p>
+
+<p>The  <code class="highlighter-rouge">seed_mode </code> was always set to 1 to use the user defined seeds as the initial joint angles guess for ik. The  <code class="highlighter-rouge">seed_angels </code> were all very close to the current joint angles that must be in the Baxter’s workplace. Since it was normally hard to get ik converge to a solution, random noise had been generated and added to the current joint angles. A list of seed angles could thus be implemented to try for at most 20 times to solve the inverse kinematics, which should be robust enough to find a valid solution.</p>
 
 <p>All of the code for this project is hosted on this page:
 <a href="https://github.com/therrma2/Baxter-Pick-And-Place">Github page</a></p>
@@ -55,7 +93,7 @@
       <footer>
     <ul>
     	<li>minghej@u.northwestern.edu</li>
-    	<li>1310 Hinman Ave, Evanston, IL, 60201</li>
+    	<li>1133 North Dearborn, Chicago, IL, 60610</li>
     	<li>(773) 273-0198</li>
     </ul>
 </footer>

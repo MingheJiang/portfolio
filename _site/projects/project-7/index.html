@@ -29,19 +29,107 @@
 
       <main class="project">
 	<section id="contact-content">
-		<img id="project-image" src="/portfolio//public/images/coronal1.JPG">
+		<img id="project-image" src="/portfolio//public/images/CPPM_1.jpg">
 		<h1 id="project-title">Coronal Plane Perturbation Mechanism</h1>
-		<h2 id="project-date">May 1, 2015</h2>
+		<h2 id="project-date">December 6, 2016</h2>
 
-		<h2 id="overview">Overview</h2>
+		<h2 id="introduction">Introduction</h2>
+<p>Human joint stiffness results from passive tissues that cross the joint and muscle-activated mechanics, which is what happens when people co-contract. Characterizing these properties in the human ankle for the coronal plane is important for us.</p>
 
-<p>The regulation of joint mechanics is central to interaction with the surrounding world, and knowledge of these properties is useful for the design and control of biomimetic systems. These mechanics are quantified using perturbations and system identification analyses.</p>
+<p>The Neurobionics Lab at the Rehabilitation Institute of Chicago has a high performance actuator mounted to a Biodex chair, and aims to develop an attachment that could be used to test in the coronal plane (ankle inversion / eversion axis).</p>
 
-<p>This project was to develop an attachment that would do the test in the coronal plane (ankle inversion / eversion axis) of a Biodex chair.</p>
+<p>This project involves the mechanical design of such attachment mentioned before, measuring the stiffness in the human ankle with it and doing system identification analyses via Matlab.</p>
+
+<p><a href="/CPPM_6.jpg">\※ HERE IS THE POSTER ※/</a></p>
+
+<h2 id="mechanical-design">Mechanical design</h2>
+<p>This attachment is assembled to the Biodex chair and used for testing in the coronal plane.</p>
 
 <p align="center">
-<img src="https://s3.amazonaws.com/f.cl.ly/items/2u0X2X0O3C010t000m2H/coronal.JPG?v=60e91230" width="580" />
+<img src="/portfolio//public/images/CPPM_2.PNG" width="500" height="250" />
+
+<img src="/portfolio//public/images/CPPM_3.png" width="500" height="250" />
 </p>
+
+<h2 id="simulation--system-identification-analysis">Simulation &amp; System identification analysis</h2>
+<p align="center">
+<img src="/portfolio//public/images/CPPM_4.png" width="700" height="250" />
+</p>
+
+<p>Human ankle impedance system was modeled as a second order linear time-invariant system.</p>
+
+<p>The position input was filtered Gaussian white noise input with an amplitude of 1 rad, filtered using 4th-order Butterworth low-pass filter with 20-Hz cutoff frequency, and a total time of 5 seconds. The simulation sample frequency was 2000 Hz. Noise, which was also filtered using a low-pass filter with 20-Hz cutoff frequency, was added to the output data to more accurately simulate a real system. Torque as output data was collected.</p>
+
+<h3 id="correlation-analysis">Correlation Analysis</h3>
+
+<p>The correlation analysis method uses the cross correlation between the input and output signals as an estimation of the impulse response, as shown by the following equation:</p>
+<p align="center">
+<img src="/portfolio//public/images/CPPM_5.gif" width="150" height="40" />
+</p>
+<p>u(k) is the input of the system, y(k) is the output of the system, e(k) is the disturbance, h(k) is the impulse response.</p>
+
+<p>The input signal must be white noise.
+This method reduces the impact of noise since noise is independant.</p>
+
+<h3 id="nonparametric-system-identification">Nonparametric system identification</h3>
+
+<p>Impulse response was identified with Matlab function: <strong>cra</strong> (<strong>Correlation Analysis</strong>)</p>
+
+<p>Frequency response was identified with Matlab function: <strong>spa</strong> &amp; <strong>etfe</strong></p>
+
+<p align="center">
+<img src="/portfolio//public/images/CPPM_6.jpg" />
+</p>
+
+<h2 id="torque-measurement">Torque measurement</h2>
+
+<p>All data were collected from a single subject. The apparatus has been described previously. In summary, the subject was seated comfortably with the trunk secured to a Biodex chair. The left foot was positioned on the machine attachment and the right one was on a plane with the same height. The axis of rotation of the motor was aligned with the ankle inversion / eversion axis.</p>
+
+<p>The position input was filtered Gaussian white noise input with an amplitude of 0.0175 rad, filtered using 4th-order Butterworth low-pass filter with 5-Hz cutoff frequency, and a total time of 45 seconds. All the data were collected at the sample rate of 2500 Hz. Torque as output data was collected.
+The maximum voluntary contraction (MVC) of the subject was 138.2622N.</p>
+
+<p>There were five conditions which desgined to achieve different mean torque by asking the subject to hold different contraction and each of them had three trails in this experiment:</p>
+
+<ol>
+  <li>No subject on the machine</li>
+  <li>A subject with no contraction</li>
+  <li>A subject with 30% of MVC</li>
+  <li>A subject with 50% of MVC</li>
+  <li>A subject with 70% of MVC</li>
+</ol>
+
+<p align="center">
+<img src="/portfolio//public/images/CPPM_1.jpg" width="550" height="300" />
+</p>
+
+<h2 id="data-analysis">Data Analysis</h2>
+
+<p>Data which was from the condition that there was no subject on the machine was used to estimate the contribution of the machine to the output and would be removed.</p>
+
+<p>The machine is modeled as a mapping from acceleration to torque. The impulse response of the machine dynamics was estimated using the 8~12 seconds of data. For the most accurate result, the entire 45 second recording period would be used.</p>
+
+<p>This identified impulse response is used to predict the machine torque by convolving the acceleration with the machine impulse response and subtracting out this contributed torque. The remaining torque is used to characterize the system.</p>
+
+<p>Impulse response was identified with Matlab function: <strong>cra</strong> (<strong>Correlation Analysis</strong>)</p>
+<p align="center">
+<img src="/portfolio//public/images/CPPM_7.jpg" width="500" height="300" />
+</p>
+
+<p>Frequency response was identified with Matlab function: <strong>spa</strong> &amp; <strong>etfe</strong></p>
+<p align="center">
+<img src="/portfolio//public/images/CPPM_8.jpg" width="500" height="300" />
+</p>
+<p>It could be seen that increases in the mean torque shift the low-frequency gain curve while the resonant point moves to a higher frequency. The inertial which is the slope of the frequency response almost constant over a wide range of mean torques.</p>
+
+<p>The stiffness was determined from the intercept of the frequency response and the magnitude axis, since the value of the magnitude of the frequency response function for small  is log(1/k), k is stiffness.</p>
+<p align="center">
+<img src="/portfolio//public/images/CPPM_9.png" width="500" height="300" />
+</p>
+<center>Ankle stiffness at different levels of mean torque</center>
+<p>It could be seen that human ankle stiffness increases with the increase of mean torque.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>This project designed an attachment to achieve testing human ankle in the coronal plane. From the data analysis, it has shown that human ankle stiffness increases with the increase of mean torque. In the future, this attachment can be extended to do parametric analysis in human ankle inertia, stiffness and damping.</p>
 
 
 	</section>
@@ -52,7 +140,7 @@
       <footer>
     <ul>
     	<li>minghej@u.northwestern.edu</li>
-    	<li>1310 Hinman Ave, Evanston, IL, 60201</li>
+    	<li>1133 North Dearborn, Chicago, IL, 60610</li>
     	<li>(773) 273-0198</li>
     </ul>
 </footer>
