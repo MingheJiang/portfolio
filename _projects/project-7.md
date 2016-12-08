@@ -11,6 +11,7 @@ image6: CPPM_6.jpg
 image7: CPPM_7.jpg
 image8: CPPM_8.jpg
 image9: CPPM_9.png
+image10: CPPM_10.jpg
 ---
 
 ## Introduction
@@ -20,7 +21,7 @@ The Neurobionics Lab at the Rehabilitation Institute of Chicago has a high perfo
 
 This project involves the mechanical design of such attachment mentioned before, measuring the stiffness in the human ankle with it and doing system identification analyses via Matlab. 
 
-[\※ HERE IS THE POSTER ※/](/CPPM_6.jpg)
+[\※ HERE IS THE POSTER ※/](https://d17oy1vhnax1f7.cloudfront.net/items/3z3E3F193d2e0E1h0K3h/CPPM_10.jpg?v=24fc85ee)
 
 ## Mechanical design
 This attachment is assembled to the Biodex chair and used for testing in the coronal plane. 
@@ -33,7 +34,7 @@ This attachment is assembled to the Biodex chair and used for testing in the cor
 
 ## Simulation & System identification analysis 
 <p align="center">
-<img src="{{site.baseurl}}/{{site.image_path}}/{{ page.image4 }}" width="700" height="250" />
+<img src="{{site.baseurl}}/{{site.image_path}}/{{ page.image4 }}" width="700" height="250"/>
 </p>
 
 Human ankle impedance system was modeled as a second order linear time-invariant system.

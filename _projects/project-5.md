@@ -1,7 +1,7 @@
 ---
 layout: project
 title: SmartErasor
-date: March 10, 2015
+date: March 10, 2016
 image: smart.png
 ---
 

@@ -29,29 +29,20 @@
 
       <main class="project">
 	<section id="contact-content">
-		<img id="project-image" src="/portfolio//public/images/smart.png">
-		<h1 id="project-title">SmartErasor</h1>
-		<h2 id="project-date">March 10, 2016</h2>
+		<img id="project-image" src="/portfolio//public/images/RML_1.png">
+		<h1 id="project-title">Robotic Manipulation Library</h1>
+		<h2 id="project-date">December 10, 2015</h2>
 
 		<h2 id="overview">Overview</h2>
 
-<p>This project was the final project of the course EECS 332, Intro. to Computer Vision, at Northwestern University. The goal of this project was erasing a row of characters automatically and gradually while letting the background texture be unchanged.</p>
+<p>This project was part of the course Robotic Manipulation, at Northwestern University. This project developed a Matlab robotics software library which contains functions including forward and inverse kinematics, inertia matrix, inverse and forward dynamics trajectory and so on.</p>
 
-<h2 id="steps">Steps</h2>
-
-<ul>
-  <li>Find red region and get its average HSV value.</li>
-  <li>Filter the image and get red areas in HSV space.</li>
-  <li>Filter the pen’s tip and Get the minimum rectangle which can hold the pen’s tip.</li>
-  <li>Kalman filter is added to estimate the pen tip position.</li>
-</ul>
-<p align="center">
-<img src="https://s3.amazonaws.com/f.cl.ly/items/0f3c1p3z082G2m031o0f/smart3.png?v=13b9f977" width="580" />
-
+<p>The video was simulation by letting the UR5 six-joint robot arm follow the quintic trajectory from rest at θ(0) = 0 to θ(T = 1 s) when all joint angles are π/2. Assumed that the joint torques at each joint were constant at 2 Nm.</p>
 
 <p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aJ_qrJvRTvI" frameborder="0" allowfullscreen=""></iframe>
-</p></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XSSy_S7JEZ4" frameborder="0" allowfullscreen=""></iframe>
+</p>
+<p>The whole library is <a href="https://github.com/MingheJiang/robotic-lib">HERE</a>.</p>
 
 
 	</section>
