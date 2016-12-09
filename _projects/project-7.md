@@ -21,7 +21,7 @@ The Neurobionics Lab at the Rehabilitation Institute of Chicago has a high perfo
 
 This project involves the mechanical design of such attachment mentioned before, measuring the stiffness in the human ankle with it and doing system identification analyses via Matlab. 
 
-[\※ HERE IS THE POSTER ※/](https://d17oy1vhnax1f7.cloudfront.net/items/3z3E3F193d2e0E1h0K3h/CPPM_10.jpg?v=24fc85ee)
+[\※ HERE IS THE POSTER ※/](https://d17oy1vhnax1f7.cloudfront.net/items/0g462e0g3a1e1025140k/Slide1.png?v=40773ac7)
 
 ## Mechanical design
 This attachment is assembled to the Biodex chair and used for testing in the coronal plane. 
