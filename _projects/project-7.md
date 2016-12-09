@@ -39,7 +39,7 @@ This attachment is assembled to the Biodex chair and used for testing in the cor
 
 Human ankle impedance system was modeled as a second order linear time-invariant system.
 
-The position input was filtered Gaussian white noise input with an amplitude of 1 rad, filtered using 4th-order Butterworth low-pass filter with 20-Hz cutoff frequency, and a total time of 5 seconds. The simulation sample frequency was 2000 Hz. Noise, which was also filtered using a low-pass filter with 20-Hz cutoff frequency, was added to the output data to more accurately simulate a real system. Torque as output data was collected.
+The position input was filtered Gaussian white noise input with an amplitude of 1 rad, filtered using 4th-order Butterworth low-pass filter with 20-Hz cutoff frequency, and a total time of 5 seconds. The simulation sample frequency was 2000 Hz. Noise, which was also filtered using a low-pass filter with 20-Hz cutoff frequency, was added to the output data to more accurately simulate a real system. The signal to noise ratio was set to be higher than 10. Torque as output data was collected. Torque as output data was collected.
 
 ### Correlation Analysis
 
@@ -93,19 +93,22 @@ Impulse response was identified with Matlab function: **cra** (**Correlation Ana
 <p align="center">
 <img src="{{site.baseurl}}/{{site.image_path}}/{{ page.image7 }}" width="500" height="300" />
 </p>
+<center> Impulse response of one trail </center>
 
 Frequency response was identified with Matlab function: **spa** & **etfe**
 <p align="center">
-<img src="{{site.baseurl}}/{{site.image_path}}/{{ page.image8 }}" width="500" height="300" />
+<img src="{{site.baseurl}}/{{site.image_path}}/{{ page.image8 }}" width="400" height="450" />
 </p>
-It could be seen that increases in the mean torque shift the low-frequency gain curve while the resonant point moves to a higher frequency. The inertial which is the slope of the frequency response almost constant over a wide range of mean torques.
+<center> Frequency response of one trail </center>
 
-The stiffness was determined from the intercept of the frequency response and the magnitude axis, since the value of the magnitude of the frequency response function for small  is log(1/k), k is stiffness.
+It could be seen that stiffness gain was flat at low frequencies, had a resonant valley at intermediate frequencies and rose at high frequencies. Increases in the mean torque shifted the low-frequency gain curve while the resonant point moved to a higher frequency. The inertial which was the slope of the frequency response almost kept constant over a wide range of mean torques.
+
+The stiffness was determined from the intercept of the frequency response and the magnitude axis, since the value of the magnitude of the frequency response function for small is log(1/k), k is stiffness.
 <p align="center">
 <img src="{{site.baseurl}}/{{site.image_path}}/{{ page.image9 }}" width="500" height="300" />
 </p>
 <center>Ankle stiffness at different levels of mean torque</center>
-It could be seen that human ankle stiffness increases with the increase of mean torque.
+It could be seen that human ankle stiffness increased with the increase of mean torque within a limited range and then decreased.
 
 ## Conclusion
-This project designed an attachment to achieve testing human ankle in the coronal plane. From the data analysis, it has shown that human ankle stiffness increases with the increase of mean torque. In the future, this attachment can be extended to do parametric analysis in human ankle inertia, stiffness and damping. 
+This project designed an attachment to achieve testing human ankle impedance in the coronal plane. From the data analysis, it has shown that uman ankle stiffness increased with the increase of mean torque within a limited range and then decreased. In the future, this attachment can be extended to do parametric analysis in the parameters of human ankle impedance, such as inertia, stiffness and damping. 
