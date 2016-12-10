@@ -23,7 +23,7 @@ This project involves the mechanical design of such attachment mentioned before,
 
 [\※ HERE IS THE POSTER ※/](https://d17oy1vhnax1f7.cloudfront.net/items/36050D1j3z1H0u3b3j3H/Slide1.jpg?v=4d44254c)
 
-## Mechanical design
+## Mechanical Design
 This attachment is assembled to the Biodex chair and used for testing in the coronal plane. 
 
 <p align="center">
@@ -52,7 +52,7 @@ u(k) is the input of the system, y(k) is the output of the system, e(k) is the d
 The input signal must be white noise.
 This method reduces the impact of noise since noise is independant.
 
-### Nonparametric system identification
+### Nonparametric System Identification
 
 Impulse response was identified with Matlab function: **cra** (**Correlation Analysis**)
 
@@ -62,7 +62,7 @@ Frequency response was identified with Matlab function: **spa** & **etfe**
 <img src="{{site.baseurl}}/{{site.image_path}}/{{ page.image6 }}"  />
 </p>
 
-## Torque measurement 
+## Torque Measurement 
 
 All data were collected from a single subject. The apparatus has been described previously. In summary, the subject was seated comfortably with the trunk secured to a Biodex chair. The left foot was positioned on the machine attachment and the right one was on a plane with the same height. The axis of rotation of the motor was aligned with the ankle inversion / eversion axis. 
 
